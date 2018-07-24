@@ -54,11 +54,11 @@ func lca(node *node) (*node, bool) {
 		this_node.ancestor = node
 	}
 	node.color = 1
-	if node.name == target_node_2.name && target_node_2.color == 1 && target_node_2.color == 1 {
+	if node.name == target_node_2.name && target_node_2.color == 1 && target_node_1.color == 1 {
 		return_val := find(target_node_1).ancestor
 		return return_val, true
 	} else if node.name == target_node_1.name && target_node_2.color == 1 && target_node_1.color == 1 {
-		return_val := find(target_node_1).ancestor
+		return_val := find(target_node_2).ancestor
 		return return_val, true
 	} else {
 		return nil, false
