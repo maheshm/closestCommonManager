@@ -1,6 +1,5 @@
 package search_manager
 
-//yet to be implemented
 import (
 	"optiopay/model/employee_model"
 )
