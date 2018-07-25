@@ -2,32 +2,20 @@ package main
 
 import (
 	"fmt"
-	"optiopay/lib/lca"
+	"flag"
+	"optiopay/api/cmd"
 )
 
-/*type data struct {
-	name string
-	children []*data
-}
-*/
-
 func main() {
-	var one, two, three, four, five, six, seven *lca.Data
-	one = &lca.Data{Name: "1"}
-	two = &lca.Data{Name: "2"}
-	three = &lca.Data{Name: "3"}
-	four = &lca.Data{Name: "4"}
-	five = &lca.Data{Name: "5"}
-	six = &lca.Data{Name: "6"}
-	seven = &lca.Data{Name: "7"}
+	cmd_flag := flag.Bool("cmd", false, "Interactive commandline prompt")
+	api_flag := flag.Bool("api", false, "Web API - not implemented")
+	file_flag := flag.Bool("file", false, "File input - not implemented")
 
-	one.Children = append(one.Children, two)
-	one.Children = append(one.Children, three)
-	two.Children = append(two.Children, four)
-	two.Children = append(two.Children, five)
-	three.Children = append(three.Children, six)
-	three.Children = append(three.Children, seven)
+	flag.Parse()
 
-	lca.Init(one)
-	fmt.Printf("%s", lca.Search("4","5"))
+	if *api_flag == true || *file_flag == true || *cmd_flag == false {
+		fmt.Println("Only interactive commandline promt is implemented. Please use -cmd flag")
+	} else {
+		cmd.Init()
+	}
 }

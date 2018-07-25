@@ -1,5 +1,7 @@
 package memory
 
+import "strconv"
+
 type Entry struct {
 	Id int
 	Data map[string]interface{}
@@ -15,11 +17,21 @@ func store_data(data map[string]interface{}) map[string]interface{} {
 	for k,v := range data {
 		data_to_be_stored[k] = v
 	}
-
 	return data_to_be_stored
 }
 
-func Get() {}
+func Get(key, value string) *Entry {
+	if key == "Id" {
+		val, _ := strconv.Atoi(value)
+		return memory_store[val]
+	}
+	for _, entry := range memory_store {
+		if entry.Data[key] == value {
+			return entry
+		}
+	}
+	return nil
+}
 
 func Set(data map[string]interface{}) *Entry {
 	entry_data := store_data(data)
@@ -35,7 +47,9 @@ func Set(data map[string]interface{}) *Entry {
 }
 
 func Update(id int, data map[string]interface{}) *Entry {
-	return memory_store[0]
+	entry_data := store_data(data)
+	memory_store[id].Data = entry_data
+	return memory_store[id]
 }
 
 func Delete () {}
