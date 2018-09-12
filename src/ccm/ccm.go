@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"flag"
-	"optiopay/api/cmd"
+	"ccm/api/cmd"
 )
 
 func main() {

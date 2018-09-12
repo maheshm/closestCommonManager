@@ -1,6 +1,6 @@
 package employee
 
-import "optiopay/model/employee_model"
+import "ccm/model/employee_model"
 
 func Create(name string) *employee_model.Employee {
 	employee := employee_model.Create(name)

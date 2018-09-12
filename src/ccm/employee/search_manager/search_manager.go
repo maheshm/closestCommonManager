@@ -1,7 +1,7 @@
 package search_manager
 
 import (
-	"optiopay/model/employee_model"
+	"ccm/model/employee_model"
 )
 
 var ceo_of_company *employee_model.Employee

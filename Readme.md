@@ -1,13 +1,13 @@
-# Optiopay Challenge - Find closest common Manager
+# Find closest common Manager
 
 To build run the following from the parent most directory of the project
 
     go get github.com/manifoldco/promptui
-    go build optiopay
+    go build ccm
 
 To run use the following command:
 
-    ./optiopay -cmd
+    ./ccm -cmd
 
 ## Assumptions and limitations
 

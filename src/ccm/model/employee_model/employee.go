@@ -1,8 +1,8 @@
 package employee_model
 
 import (
-	"optiopay/datastore/memory" //should have been an interface rather
-	"optiopay/lib/lca"
+	"ccm/datastore/memory" //should have been an interface rather
+	"ccm/lib/lca"
 	"strconv"
 )
 

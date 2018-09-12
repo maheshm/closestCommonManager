@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"fmt"
-	"optiopay/employee/create"
-	"optiopay/model/employee_model"
-	"optiopay/employee/search_manager"
+	"ccm/employee/create"
+	"ccm/model/employee_model"
+	"ccm/employee/search_manager"
 	"github.com/manifoldco/promptui"
 )
 
